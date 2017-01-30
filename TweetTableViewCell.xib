@@ -119,6 +119,16 @@
                     <constraint firstItem="lHb-cU-jqd" firstAttribute="leading" secondItem="sCc-NI-lhg" secondAttribute="trailing" id="yNu-nw-Ysh"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="P2Z-i9-Iyc" id="vy1-X7-rgi"/>
+                <outlet property="favoriteButton" destination="WYc-G8-vnC" id="l9z-ef-c4r"/>
+                <outlet property="handleLabel" destination="43f-n9-HU8" id="vTD-Ko-gGz"/>
+                <outlet property="namelabel" destination="Y1E-ta-PTK" id="kaW-cd-e67"/>
+                <outlet property="profileImageView" destination="70Z-Sr-HMu" id="5Ev-aV-bkm"/>
+                <outlet property="replyButton" destination="miU-Gg-zb0" id="LpB-KE-sJO"/>
+                <outlet property="retweetButton" destination="W9K-He-gfi" id="klh-RL-SkQ"/>
+                <outlet property="timestampLabel" destination="TEh-fH-gE0" id="qEU-Tk-wzL"/>
+            </connections>
             <point key="canvasLocation" x="58" y="88"/>
         </tableViewCell>
     </objects>

@@ -7,6 +7,7 @@
 //
 
 #import "TweetListViewController.h"
+#import "TweetTableViewCell.h"
 
 @interface TweetListViewController ()  <UITableViewDataSource>
 
@@ -21,6 +22,11 @@
     // Do any additional setup after loading the view from its nib.
     
     self.viewTable.dataSource = self;
+    self.viewTable.rowHeight = 200;
+    
+    UINib *nib = [UINib nibWithNibName:@"TweetTableViewCell" bundle:nil];
+    
+    [self.viewTable registerNib:nib forCellReuseIdentifier:@"TweetTableViewCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,5 +43,18 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 20;
+}
+
+
+
+
+- (TweetTableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
+    TweetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetTableViewCell" forIndexPath:indexPath];
+    return cell;
+}
 
 @end
