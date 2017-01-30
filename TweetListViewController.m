@@ -22,7 +22,8 @@
     // Do any additional setup after loading the view from its nib.
     
     self.viewTable.dataSource = self;
-    self.viewTable.rowHeight = 200;
+    self.viewTable.estimatedRowHeight = 200;
+    self.viewTable.rowHeight = UITableViewAutomaticDimension;
     
     UINib *nib = [UINib nibWithNibName:@"TweetTableViewCell" bundle:nil];
     
@@ -48,12 +49,20 @@
     return 20;
 }
 
-
-
-
 - (TweetTableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
     TweetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetTableViewCell" forIndexPath:indexPath];
+    
+    // NOTE: Hiding a view with auto-layout does not really work.  The view will hide but the
+    //       layout constraints will still be in effect.  So the layout will leave the spot for the view.
+    //       So instead need to set a constraint to 0 to get rid of.
+    if (indexPath.row % 5) {
+        cell.retweetContainerHeightContraint.constant = 30; // 24 * indexPath.row;
+
+    } else {
+        cell.retweetContainerHeightContraint.constant = 0;
+    }
+    [cell setNeedsUpdateConstraints];
     return cell;
 }
 

@@ -20,6 +20,7 @@
     // Override point for customization after application launch.
     
     // JJB Manually setup the view controller to be the new one I just created!
+    // ToDo: Should put this into a Nav Controller.
     TweetListViewController *viewController = [[TweetListViewController alloc] initWithNibName:@"TweetListViewController" bundle:nil];
     CGRect frame = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:frame];

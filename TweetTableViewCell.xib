@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="522" height="472"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="522" height="471.5"/>
+                <frame key="frameInset" width="522" height="471"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFK-29-jei" userLabel="Top Container">
@@ -48,7 +48,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Handle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43f-n9-HU8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Handle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43f-n9-HU8">
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" id="VCY-Sr-ZDB"/>
                                 </constraints>
@@ -64,7 +64,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2Z-i9-Iyc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet Content" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2Z-i9-Iyc">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -81,6 +81,7 @@
                             <constraint firstItem="43f-n9-HU8" firstAttribute="height" secondItem="Y1E-ta-PTK" secondAttribute="height" id="ZRP-Mr-5VD"/>
                             <constraint firstAttribute="bottom" secondItem="P2Z-i9-Iyc" secondAttribute="bottom" id="aAA-HQ-DAX"/>
                             <constraint firstItem="43f-n9-HU8" firstAttribute="centerY" secondItem="Y1E-ta-PTK" secondAttribute="centerY" id="aCD-f2-dz1"/>
+                            <constraint firstItem="TEh-fH-gE0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="43f-n9-HU8" secondAttribute="trailing" constant="8" id="cdL-b8-SrH"/>
                             <constraint firstItem="43f-n9-HU8" firstAttribute="leading" secondItem="Y1E-ta-PTK" secondAttribute="trailing" constant="8" id="gXG-j4-w7U"/>
                             <constraint firstItem="Y1E-ta-PTK" firstAttribute="leading" secondItem="lHb-cU-jqd" secondAttribute="leading" constant="18" id="qoA-Mr-FNX"/>
                             <constraint firstItem="P2Z-i9-Iyc" firstAttribute="leading" secondItem="Y1E-ta-PTK" secondAttribute="leading" id="wE3-Np-yHQ"/>
@@ -127,6 +128,7 @@
                 <outlet property="profileImageView" destination="70Z-Sr-HMu" id="5Ev-aV-bkm"/>
                 <outlet property="replyButton" destination="miU-Gg-zb0" id="LpB-KE-sJO"/>
                 <outlet property="retweetButton" destination="W9K-He-gfi" id="klh-RL-SkQ"/>
+                <outlet property="retweetContainerHeightContraint" destination="Tr4-eO-bff" id="2rO-tU-A2y"/>
                 <outlet property="timestampLabel" destination="TEh-fH-gE0" id="qEU-Tk-wzL"/>
             </connections>
             <point key="canvasLocation" x="58" y="88"/>
