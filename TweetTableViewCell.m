@@ -26,6 +26,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *retweetButton;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 
+
+
 @end
 
 
@@ -36,9 +38,9 @@
     [super awakeFromNib];
     // Initialization code
     self.namelabel.text = @"Jennifer Beck";
-    self.handleLabel.text = @"JenniferBeckJenniferBeckJenniferBeck";
+    self.handleLabel.text = @"jjbeck";
     self.timestampLabel.text = @"4h";
-    self.contentLabel.text = @"Tihs is a simple tweet";
+    self.contentLabel.text = [NSString stringWithFormat:@"%ld This is a simple tweet", self.rowCount];
     //self.contentLabel.text = @"This is a simple tweet.  But I want the text to be really really long.   I really am wondering how much text can actually fit into the cell.";
     
 }

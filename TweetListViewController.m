@@ -63,6 +63,9 @@
         cell.retweetContainerHeightContraint.constant = 0;
     }
     [cell setNeedsUpdateConstraints];
+    
+    cell.rowCount = indexPath.row;
+    
     return cell;
 }
 
